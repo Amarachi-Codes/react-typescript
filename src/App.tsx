@@ -3,6 +3,7 @@
 import './App.css'
 import { GENDER } from './constants/gender'
 import ButtonComp from './props/ButtonComp'
+import Employee from './props/Employee'
 import Student from './props/Student'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
        <Student id={2} firstname='Ethel-Doris' lastname='Igwilo' gender={GENDER.Female}/>
        <Student id={3} firstname='Onyeka' lastname='Madueke' gender={GENDER.Male}/>
        <Student id={4} firstname='Stanley Kamsi' lastname='Igwilo' gender={GENDER.Male}/>
+       <Employee id={1} fullname='Madueke Ethel-Doris' username='EthelD' email='etheldorisamarachi@gmail.com'/>
        
     </>
   )
