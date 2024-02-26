@@ -23,7 +23,7 @@ function App() {
        <Student id={1} firstname='Stanley' lastname='Igwilo' gender={GENDER.Male}/> 
        <Student id={2} firstname='Ethel-Doris' lastname='Igwilo' gender={GENDER.Female}/>
        <Student id={3} firstname='Onyeka' lastname='Madueke' gender={GENDER.Male}/>
-       
+       <Student id={4} firstname='Stanley Kamsi' lastname='Igwilo' gender={GENDER.Male}/>
        
     </>
   )
