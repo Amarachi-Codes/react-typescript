@@ -1,0 +1,23 @@
+.button{
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 6px;
+}
+.primary{
+    background-color: #0076ff;
+    color: #fff;
+}
+.secondary{
+    background-color: #6c757d;
+    color: #fff;
+}
+.disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.readmore{
+background-color: cadetblue;
+color: #fff;
+}
