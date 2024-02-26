@@ -30,6 +30,7 @@ function App() {
        <Student id={4} firstname='Stanley Kamsi' lastname='Igwilo' gender={GENDER.Male}/>
        <Myheading/>
        <Employee id={1} fullname='Madueke Ethel-Doris' username='EthelD' email='etheldorisamarachi@gmail.com'/>
+       <Employee id={2} fullname='Madueke Goodness' username='Goody23' email='gudijulieth@gmail.com'/>
        
     </>
   )
