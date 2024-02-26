@@ -21,6 +21,9 @@ function App() {
       <ButtonComp label='Log In' onClick={handleLogin} color="secondary"/>
       <ButtonComp label='Read More' onClick={handleReadmore} color='readmore' disabled/>
        <Student id={1} firstname='Stanley' lastname='Igwilo' gender={GENDER.Male}/> 
+       <Student id={2} firstname='Ethel-Doris' lastname='Igwilo' gender={GENDER.Female}/>
+       {/* <Student id={3} firstname='Onyeka' lastname='Madueke' gender={GENDER.Male}/> */}
+       
     </>
   )
 }
