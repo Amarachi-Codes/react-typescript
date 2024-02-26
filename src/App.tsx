@@ -1,7 +1,9 @@
 
 
 import './App.css'
+import { GENDER } from './constants/gender'
 import ButtonComp from './props/ButtonComp'
+import Student from './props/Student'
 
 function App() {
  const handleClick =()=>{
@@ -18,7 +20,7 @@ function App() {
       <ButtonComp label='Sign up' onClick={handleClick}/>
       <ButtonComp label='Log In' onClick={handleLogin} color="secondary"/>
       <ButtonComp label='Read More' onClick={handleReadmore} color='readmore' disabled/>
-        
+       <Student id={1} firstname='Stanley' lastname='Igwilo' gender={GENDER.Male}/> 
     </>
   )
 }
