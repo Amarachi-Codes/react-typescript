@@ -35,11 +35,11 @@ setEmployee((prevEmployee)=>({
     <div>
       Employeeinfo
     </div>
-    <label htmlFor="firstname">Firstname</label>
+    <label htmlFor="firstname">Firstname:</label>
     <input type="text" name="firstname" id="firstname" onChange={handleFirstnameChange} value={employee.firstname}/><br />
-    <label htmlFor="lastname">Lastname</label>
+    <label htmlFor="lastname">Lastname:</label>
     <input type="text" name="lastname" id="lastname" onChange={handleLastnameChange} value={employee.lastname}/><br />
-    <label htmlFor="jobtitle">Job Title</label>
+    <label htmlFor="jobtitle">Job Title:</label>
     <input type="text" name="jobtitle" id="jobtitle" onChange={handleJobtitleChange} value={employee.jobtitle}/>
     <br />
     <br />
