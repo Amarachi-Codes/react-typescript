@@ -11,13 +11,37 @@ const Employeeinfo = () => {
         lastname:"",
         jobtitle:"",
     })
-    const handlefirstnameChange =(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)=>{
-
+    const handleFirstnameChange =(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)=>{
+setEmployee((prevEmployee)=>({
+  ...prevEmployee,
+  firstname: e.target.value,
+    }))
     }
+
+    const handleLastnameChange =(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)=>{
+      setEmployee((prevEmployee)=>({
+        ...prevEmployee,
+       lastname: e.target.value,
+          }))
+          }
+          const handleJobtitleChange =(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)=>{
+            setEmployee((prevEmployee)=>({
+              ...prevEmployee,
+             jobtitle: e.target.value,
+                }))
+                }
   return (
+    <>
     <div>
       Employeeinfo
     </div>
+    <label htmlFor="firstname">Firstname</label>
+    <input type="text" name="firstname" id="firstname" onChange={handleFirstnameChange} value={employee.firstname}/><br />
+    <label htmlFor="lastname">Lastname</label>
+    <input type="text" name="lastname" id="lastname" onChange={handleLastnameChange} value={employee.lastname}/><br />
+    <label htmlFor="jobtitle">Job Title</label>
+    <input type="text" name="jobtitle" id="jobtitle" onChange={handleJobtitleChange} value={employee.jobtitle}/>
+    </>
   )
 }
 
