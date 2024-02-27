@@ -41,6 +41,13 @@ setEmployee((prevEmployee)=>({
     <input type="text" name="lastname" id="lastname" onChange={handleLastnameChange} value={employee.lastname}/><br />
     <label htmlFor="jobtitle">Job Title</label>
     <input type="text" name="jobtitle" id="jobtitle" onChange={handleJobtitleChange} value={employee.jobtitle}/>
+    <br />
+    <br />
+    <h2>Display Info</h2>
+    <p>Firstname: {employee.firstname}</p>
+    <p>Lastname: {employee.lastname}</p>
+    <p>Jobtitle: {employee.jobtitle}</p>
+    
     </>
   )
 }
