@@ -4,6 +4,7 @@ import './App.css'
 import { GENDER } from './constants/gender'
 import ButtonComp from './props/ButtonComp'
 import Employee from './props/Employee'
+import Employeeinfo from './props/Employeeinfo'
 import Mycounter from './props/Mycounter'
 import Myheading from './props/Myheading'
 import Student from './props/Student'
@@ -35,6 +36,7 @@ function App() {
        <Employee id={1} fullname='Madueke Ethel-Doris' username='EthelD' email='etheldorisamarachi@gmail.com'/>
        <Employee id={2} fullname='Madueke Goodness' username='Goody23' email='gudijulieth@gmail.com'/>
        <Mycounter/>
+       <Employeeinfo/>
     </>
   )
 }
