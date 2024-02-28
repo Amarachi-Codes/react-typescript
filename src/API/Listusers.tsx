@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css"
 
 interface Users{
-    id:string;
+    id:number;
     name:string;
     username:string;
     email:string;
@@ -41,7 +41,7 @@ const Listusers = () => {
         }
     }
     const handleDelete =(id:number)=>{
-        alert(id + "deleted sucessfully");
+        alert("user with: "+id + " deleted sucessfully");
     }
   return (
     <>
@@ -65,7 +65,7 @@ const Listusers = () => {
                 <td>{user.username}</td>
                 <td>{user.email}</td>
                 <td>{user.address.street},{user.address.city}</td>
-                <td><button className="btn btn-danger">Delete</button></td>
+                <td><button className="btn btn-danger" onClick={()=>{handleDelete(user.id)}}>Delete</button></td>
             </tr>
         ))}
         </tbody>
