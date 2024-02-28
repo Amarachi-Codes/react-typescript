@@ -28,6 +28,7 @@ setEmployee((prevEmployee)=>({
             setEmployee((prevEmployee)=>({
               ...prevEmployee,
              jobtitle: e.target.value,
+             
                 }))
                 }
   return (
