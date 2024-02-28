@@ -40,6 +40,9 @@ const Listusers = () => {
             
         }
     }
+    const handleDelete =(id:number)=>{
+        alert(id + "deleted sucessfully");
+    }
   return (
     <>
     <div className="text text-primary">List Users</div>
