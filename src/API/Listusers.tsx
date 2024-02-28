@@ -43,6 +43,10 @@ const Listusers = () => {
     const handleDelete =(id:number)=>{
         alert("user with: "+id + " deleted sucessfully");
     }
+    const handleEdit =(id:number)=>{
+        alert("user with: "+id + " Edited sucessfully");
+    }
+    
   return (
     <>
     <div className="text text-primary">List Users</div>
@@ -65,7 +69,11 @@ const Listusers = () => {
                 <td>{user.username}</td>
                 <td>{user.email}</td>
                 <td>{user.address.street},{user.address.city}</td>
-                <td><button className="btn btn-danger" onClick={()=>{handleDelete(user.id)}}>Delete</button></td>
+                <td>
+                    <button className="btn btn-danger mx-2" onClick={()=>{handleDelete(user.id)}}>Delete</button>
+                    <button className="btn btn-primary" onClick={()=>{handleEdit(user.id)}}>Edit</button>
+                </td>
+            
             </tr>
         ))}
         </tbody>
