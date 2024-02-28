@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css"
 
 interface Users{
     id:string;
@@ -23,22 +24,50 @@ const Listusers = () => {
     useEffect(()=>{
         fetchData();
     },[])
+    
+
     const fetchData = async()=>{
         try {
            const response = await axios.get(
             "https://jsonplaceholder.typicode.com/users"
 
            );
-           console.log(response);
+           const responseData:Users[] = response.data;
+           setUsers(responseData);
+           console.log(response.data);
         } catch (error) {
            console.log(`Error fetching data:${error}`);
             
         }
     }
   return (
-    <div>
-      
-    </div>
+    <>
+    <div className="text text-primary">List Users</div>
+    <table className="table table-bordered border-primary">
+        <thead className="thead-dark">
+            <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        {users.map((user)=>(
+            <tr key={user.id}>
+                <td>{user.id}</td>
+                <td>{user.name}</td>
+                <td>{user.username}</td>
+                <td>{user.email}</td>
+                <td>{user.address.street},{user.address.city}</td>
+                <td><button className="btn btn-danger">Delete</button></td>
+            </tr>
+        ))}
+        </tbody>
+    </table>
+    </>
   )
 }
 

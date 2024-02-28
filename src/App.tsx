@@ -1,5 +1,6 @@
 
 
+import Listusers from './API/Listusers'
 import './App.css'
 import { GENDER } from './constants/gender'
 import ButtonComp from './props/ButtonComp'
@@ -37,6 +38,7 @@ function App() {
        <Employee id={2} fullname='Madueke Goodness' username='Goody23' email='gudijulieth@gmail.com'/>
        <Mycounter/>
        <Employeeinfo/>
+       <Listusers/>
     </>
   )
 }
