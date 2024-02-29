@@ -1,6 +1,7 @@
 
 
 import Listusers from './API/Listusers'
+import Randomimages from './API/Randomimages'
 import './App.css'
 import { GENDER } from './constants/gender'
 import ButtonComp from './props/ButtonComp'
@@ -39,6 +40,7 @@ function App() {
        <Mycounter/>
        <Employeeinfo/>
        <Listusers/>
+       <Randomimages/>
     </>
   )
 }
