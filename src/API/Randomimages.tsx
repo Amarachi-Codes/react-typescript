@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 interface Images{
-albumId:number,
+id:number,
 title:string,
 url:string,
 thumbnailUrl:string
@@ -27,27 +27,30 @@ const Randomimages = () => {
           
         }
     }
+    const handleDelete =(id:number)=>{
+        alert("user with: "+id + " deleted sucessfully");
+    }
   return (
     <>
     <div className="text text-secondary">Random Images</div>
     <table className="table table-bordered border-secondary">
         <thead>
             <tr>
-                <th>Album Id</th>
+                <th>Id</th>
                 <th>Title</th>
                 <th>Url</th>
-                <th>thumbnailUrl</th>
+                <th>thumbnail Url</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
             {images.map((image)=>(
-                <tr key={image.albumId}>
-                    <td>{image.albumId}</td>
+                <tr key={image.id}>
+                    <td>{image.id}</td>
                     <td>{image.title}</td>
                     <td>{image.url}</td>
-                    <td>{image.thumbnailUrl}</td>
-                    <td><button className="btn btn-danger">Delete</button></td>
+                    <td><img src={image.thumbnailUrl} alt="" /></td>
+                    <td><button className="btn btn-danger" onClick={()=>{handleDelete(image.id)}}>Delete</button></td>
                 </tr>
             ))}
         </tbody>
